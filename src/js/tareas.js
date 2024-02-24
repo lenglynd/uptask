@@ -258,6 +258,7 @@
         
         // }
         try {
+            //ha ver si llos cambio suben o no
             const url = `${Location.origin}/api/tareas/actualizar`;
             const respuesta = await fetch(url, {
                 method: 'POST',
