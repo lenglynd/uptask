@@ -27,7 +27,7 @@
         
         try {
             const id = obtenerProyecto();
-            const url = `${Location.origin}/api/tareas?id=${id}`;
+            const url =  `api/tareas?id=${id}`;
             
             const respuesta = await fetch(url);
             const resultado = await respuesta.json();
@@ -210,7 +210,7 @@
         
         
         try {
-            const url = `${Location.origin}/api/tareas`;
+            const url = `api/tareas`;
             const respuesta = await fetch(url, {
                 method: 'POST',
                 body: datos
@@ -259,7 +259,7 @@
         // }
         try {
             //ha ver si llos cambio suben o no
-            const url = `${Location.origin}/api/tareas/actualizar`;
+            const url = `api/tareas/actualizar`;
             const respuesta = await fetch(url, {
                 method: 'POST',
                 body: datos
@@ -309,7 +309,7 @@
         datos.append('estado', estado);
         datos.append('proyectoid', obtenerProyecto());
         try {
-            const url = `${Location.origin}/api/tareas/eliminar`;
+            const url = `api/tareas/eliminar`;
             const respuesta = await fetch(url, {
                 method: 'POST',
                 body: datos
